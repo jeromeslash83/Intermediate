@@ -34,10 +34,24 @@ resources = {
 water = 0
 milk = 0
 coffee = 0
+is_enough = True
 
-def check_resources():
-    """Checks if the resources are in the machine are sufficient."""
 
+def resources_left():
+    print(f"Water: {resources['water']}")
+    print(f"Milk: {resources['milk']}")
+    print(f"Coffee: {resources['coffee']}")
+    
+
+def check_resources(type):
+    """Checks if the resources in the machine are sufficient for the given order."""
+    sub_water = resources['water'] - type['ingredients']['water']
+    sub_milk = resources['milk'] - type['ingredients']['milk']
+    sub_coffee = resources['coffee'] - type['ingredients']['coffee']
+    if sub_water or sub_milk or sub_coffee < 0:
+        return False
+    else:
+        return True
 
 
 order = input("What would you like? (espresso/latte/cappuccino):\n")
