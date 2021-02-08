@@ -36,20 +36,20 @@ is_enough = True
 
 
 def resources_left():
-    print(f"Water: {resources['water']}")
-    print(f"Milk: {resources['milk']}")
-    print(f"Coffee: {resources['coffee']}")
+    print(f"Water: {resources['water']}mL")
+    print(f"Milk: {resources['milk']}mL")
+    print(f"Coffee: {resources['coffee']}g")
+    print(f"Money: ${profit}")
 
 
-def check_resources(coffee_type):
+def check_resources(needed_ingredients):
     """Checks if the resources in the machine are sufficient for the given order."""
-    sub_water = resources['water'] - MENU[coffee_type]['ingredients']['water']
-    sub_milk = resources['milk'] - MENU[coffee_type]['ingredients']['milk']
-    sub_coffee = resources['coffee'] - MENU[coffee_type]['ingredients']['coffee']
-    if sub_water >= 0 and sub_milk >= 0 and sub_coffee >= 0:
-        return True
-    else:
-        return False
+    for item in needed_ingredients:
+        if resources[item] >= needed_ingredients[item]:
+            return True
+        else:
+            print(f"We don't have enough {item}.")
+            return False
 
 
 def execute_order(type_of_order):
@@ -71,13 +71,13 @@ def add_money():
 
 while is_enough:
     order = input("What would you like? (espresso/latte/cappuccino):\n").lower()
-
     if order == 'report':
         resources_left()
     elif order == 'off':
         is_enough = False
     else:
-        if check_resources(order):
+        item = MENU[order]
+        if check_resources(item["ingredients"]):
             execute_order(order)
             total_money = add_money()
             if total_money - MENU[order]['cost'] < 0:
