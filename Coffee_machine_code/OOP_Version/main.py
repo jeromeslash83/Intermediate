@@ -1,4 +1,4 @@
-from Menu import Menu, MenuItem
+from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
@@ -17,14 +17,10 @@ while is_on:
     else:
         choice = menu.find_drink(order)
         if resources.is_resource_sufficient(choice):
-           money.make_payment(choice.cost)
+           if money.make_payment(choice.cost):
+               pass
+           else:
+               is_on = False
            resources.make_coffee(choice)
         else:
-            resources.is_resource_sufficient(choice)
             is_on = False
-
-
-
-
-
-
