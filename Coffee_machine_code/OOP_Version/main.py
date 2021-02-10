@@ -15,11 +15,7 @@ while is_on:
     elif order == 'off':
         is_on = False
     else:
-        if resources.is_resource_sufficient(my_menu.find_drink(order)):
-           if money.make_payment(my_menu.find_drink(order).cost):
-               pass
-           else:
-               is_on = False
+        if resources.is_resource_sufficient(my_menu.find_drink(order)) and money.make_payment(my_menu.find_drink(order).cost):
            resources.make_coffee(my_menu.find_drink(order))
         else:
-            is_on = False
+            print('Please select a different order.')
