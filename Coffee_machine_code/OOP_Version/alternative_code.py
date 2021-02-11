@@ -1,5 +1,5 @@
-#other version
-from menu import Menu
+
+from Menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
