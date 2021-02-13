@@ -71,6 +71,7 @@ def add_money():
 
 while is_enough:
     order = input("What would you like? (espresso/latte/cappuccino):\n").lower()
+          
     if order == 'report':
         resources_left()
     elif order == 'off':
