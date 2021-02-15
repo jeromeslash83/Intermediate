@@ -15,15 +15,11 @@ class QuizBrain:
         self.check_answer(user_answer, current_question.answer)
 
     def check_answer(self, user_answer, answer):
-            if user_answer == answer:
-                self.score += 1
-                print("Correct!")
-            else:
-                print("Wrong.")
+        if user_answer == answer:
+            self.score += 1
+            print("Correct!")
         else:
-            pass
-
         print(f"The correct answer is: {answer}.")
         print(f"Your current score is {self.score}/{self.question_number}.")
 
-        
+
