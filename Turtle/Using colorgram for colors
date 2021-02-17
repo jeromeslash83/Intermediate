@@ -1,0 +1,56 @@
+from turtle import Turtle, Screen
+import turtle as tu
+import random
+import colorgram
+
+colors = colorgram.extract('img.jpg', 20)
+color_list = []
+
+for i in range(0,10):
+    color_list.append(colors[i].rgb)
+
+t = Turtle(visible=True)
+t.penup()
+t.setheading(270)
+t.fd(200)
+t.setheading(180)
+t.fd(200)
+tu.colormode(255)
+t.pendown()
+t.setheading(0)
+
+
+def random_color():
+    color = random.choice(color_list)
+    r = color.r
+    g = color.g
+    b = color.b
+
+    return (r, g, b)
+
+
+def move_forward():
+    for _ in range(11):
+        t.pencolor(random_color())
+        t.dot(20)
+        t.penup()
+        t.fd(40)
+        t.pendown()
+
+
+def move_up():
+    t.penup()
+    t.left(90)
+    t.fd(40)
+    t.left(90)
+    t.fd(440)
+    t.setheading(0)
+
+
+for _ in range(11):
+    move_forward()
+    move_up()
+
+
+screen = Screen()
+screen.exitonclick()
