@@ -17,3 +17,6 @@ for angle in range(0, 360, 3):
     t.setheading(angle)
     t.pencolor(random_color())
     t.circle(100)
+
+screen = Screen()
+screen.exitonclick()
