@@ -24,7 +24,5 @@ for angle in range(0, 360, 3):
     draw_square()
 
 
-
-
 screen = Screen()
 screen.exitonclick()
