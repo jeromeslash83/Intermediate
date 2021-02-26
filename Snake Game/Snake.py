@@ -9,10 +9,12 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Jslash Snake Game")
 
-
-snake_pos = [(0,0),(-20,0),(-40,0)]
-for position in snake_pos:
+x = 0
+the_snake = []
+for _ in range(3):
     snake = Turtle(shape="square")
     snake.color("green")
-    snake.goto(position)
+    snake.goto(x=x, y=0)
+    x -= 20
+    the_snake.append(snake)
 
