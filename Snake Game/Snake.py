@@ -1,28 +1,27 @@
-#Main
-from turtle import Turtle, Screen
-import random
-import time
+#Snake OOP
+from turtle import Turtle
+STARTING_COORDINATES = [(0,0), (-20,0), (-40, 0)]
 
-screen= Screen()
-screen.setup(width=600, height=600)
-screen.bgcolor("black")
-screen.title("Jslash Snake Game")
-screen.tracer(0)
+class Snake:
 
-x = 0
-the_snake = []
-for _ in range(3):
-    snake = Turtle(shape="square")
-    snake.color("green")
-    snake.penup()
-    snake.goto(x=x, y=0)
-    x -= 20
-    the_snake.append(snake)
+    def __init__(self):
+        self.the_snake = []
+        self.snake(STARTING_COORDINATES)
 
-snake_moving = True
 
-while snake_moving:
-    for segment in the_snake:
-        segment.fd(20)
-        screen.update()
+    def snake(self, coordinate):
+        for _ in range(3):
+            snakes = Turtle(shape="square")
+            snakes.color("green")
+            snakes.penup()
+            snakes.goto(coordinate[_])
+            self.the_snake.append(snakes)
 
+
+    def move(self):
+        for segment in range(len(self.the_snake) - 1, 0, -1):
+            movementx = self.the_snake[segment - 1].xcor()
+            movementy = self.the_snake[segment - 1].ycor()
+            self.the_snake[segment].goto(movementx, movementy)
+        self.the_snake[0].fd(20)
+            
