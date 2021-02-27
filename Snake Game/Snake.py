@@ -24,4 +24,21 @@ class Snake:
             movementy = self.the_snake[segment - 1].ycor()
             self.the_snake[segment].goto(movementx, movementy)
         self.the_snake[0].fd(20)
+        
+        
+    def up(self):
+        self.the_snake[0].setheading(90)
+
+
+    def down(self):
+        self.the_snake[0].setheading(270)
+    
+    
+    def right(self):
+        self.the_snake[0].setheading(0)
+
+
+    def left(self):
+        self.the_snake[0].setheading(180)
+
             
