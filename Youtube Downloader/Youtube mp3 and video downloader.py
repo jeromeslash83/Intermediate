@@ -1,3 +1,5 @@
+#You need to have ffmpeg installed in your computer or else it will not download the mp3.
+
 from tkinter import Label, Entry, Button, StringVar, filedialog, messagebox, Tk, ttk
 from pytube import YouTube
 from youtube_dl import YoutubeDL
