@@ -1,4 +1,6 @@
-from turtle input TUrtle, Screen
+from turtle import Turtle, Screen
+import time
+from paddles import Paddle()
 
 screen = Screen()
 screen.setup(height=600, width=800)
