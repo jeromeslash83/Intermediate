@@ -53,9 +53,15 @@ while game_is_ongoing:
     elif player_2.distance(ball) < 30:
         ball.setheading(180 - ball.heading())
         ball.move()
+
     
-    if score.score1 = 5 or score.score2 = 5:
-        
+    if score.score1 == 5:
+        score.winner1()
+        game_is_ongoing = False
+    elif score.score2 == 5:
+        score.winner2()
+        game_is_ongoing = False
+            
 
 
          

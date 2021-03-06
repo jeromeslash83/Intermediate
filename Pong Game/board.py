@@ -39,3 +39,10 @@ class Board(Turtle):
         self.goto(-220, 200)
         self.write(f"Player 2:\n{self.score2}", True, align="center", font=("Arial", 20, 'bold'))
 
+    def winner1(self):
+        self.goto(0,0)
+        self.write(f"Player 1 Wins", True, align="center", font=("Arial", 20, 'bold'))
+
+    def winner2(self):
+        self.goto(0,0)
+        self.write(f"Player 2 Wins", True, align="center", font=("Arial", 20, 'bold'))
