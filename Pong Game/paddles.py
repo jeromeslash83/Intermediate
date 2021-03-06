@@ -13,7 +13,7 @@ class Paddle():
     def first_player(self):
         paddle = Turtle(shape="square")
         paddle.speed(50)
-        paddle.turtlesize(stretch_wid=1, stretch_len=3)
+        paddle.turtlesize(stretch_wid=1, stretch_len=5)
         paddle.color("sky blue")
         paddle.penup()
         paddle.goto(350, 0)
@@ -24,7 +24,7 @@ class Paddle():
     def second_player(self):
         paddle = Turtle(shape="square")
         paddle.speed(50)
-        paddle.turtlesize(stretch_wid=1, stretch_len=3)
+        paddle.turtlesize(stretch_wid=1, stretch_len=5)
         paddle.color("sky blue")
         paddle.penup()
         paddle.goto(-350, 0)

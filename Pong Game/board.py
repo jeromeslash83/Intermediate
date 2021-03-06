@@ -24,11 +24,11 @@ class Board(Turtle):
         self.penup()
        
     def addscore1(self):
-        self.clear
+        self.clear()
         self.score1 += 1
     
     def addscore2(self):
-        self.clear
+        self.clear()
         self.score2 += 1
 
     def score_1(self):
