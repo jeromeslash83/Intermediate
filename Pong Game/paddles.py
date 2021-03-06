@@ -9,10 +9,11 @@ class Paddle():
         self.first_player()
         self.second_player()
     
+    
     def first_player(self):
         paddle = Turtle(shape="square")
-        paddle.speed(0)
-        paddle.turtlesize(stretch_len=5)
+        paddle.speed(50)
+        paddle.turtlesize(stretch_wid=1, stretch_len=3)
         paddle.color("sky blue")
         paddle.penup()
         paddle.goto(350, 0)
@@ -22,8 +23,8 @@ class Paddle():
 
     def second_player(self):
         paddle = Turtle(shape="square")
-        paddle.speed(0)
-        paddle.turtlesize(stretch_len=5)
+        paddle.speed(50)
+        paddle.turtlesize(stretch_wid=1, stretch_len=3)
         paddle.color("sky blue")
         paddle.penup()
         paddle.goto(-350, 0)
@@ -31,20 +32,20 @@ class Paddle():
         self.paddle_2.append(paddle)
 
     def move_up_1(self):
-        self.paddle_1[0].fd(20)
+        self.paddle_1[0].fd(30)
     
 
     def move_down_1(self):
         y = self.paddle_1[0].ycor()
-        self.paddle_1[0].goto(self.paddle_1[0].xcor(), y - 20)
+        self.paddle_1[0].goto(self.paddle_1[0].xcor(), y - 30)
 
 
 
     def move_up_2(self):
-        self.paddle_2[0].fd(20)
+        self.paddle_2[0].fd(30)
 
 
     def move_down_2(self):
         y = self.paddle_2[0].ycor()
-        self.paddle_2[0].goto(self.paddle_2[0].xcor(), y - 20)
+        self.paddle_2[0].goto(self.paddle_2[0].xcor(), y - 30)
 
