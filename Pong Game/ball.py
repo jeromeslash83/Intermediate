@@ -9,7 +9,7 @@ class Ball(Turtle):
         self.shapesize(1, 1)
         self.color("white")
         self.penup()
-        self.speed(20)
+        self.speed(50)
 
     def move(self):
-        self.fd(15)
+        self.fd(20)
