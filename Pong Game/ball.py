@@ -12,4 +12,4 @@ class Ball(Turtle):
         self.speed(20)
 
     def move(self):
-        self.fd(20)
+        self.fd(15)
