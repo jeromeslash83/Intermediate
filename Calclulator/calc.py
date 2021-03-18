@@ -68,8 +68,10 @@ op_sqrt.grid(row=2,column=2)
 op_fraction = Button(gui,text='1/x',bg='gold',fg='black',height=4,width=8,font=font)
 op_fraction.grid(row=2,column=1)
 
-def me():
-    pass
+def button_press():
+    expression = ""
+    expression = str(num)
+    
 
 entry = Entry(width=8)
 entry.grid(row=1, columnspan=4)
