@@ -69,8 +69,7 @@ op_fraction = Button(gui,text='1/x',bg='gold',fg='black',height=4,width=8,font=f
 op_fraction.grid(row=2,column=1)
 
 def button_press():
-    expression = ""
-    expression = str(num)
+    pass
     
 
 entry = Entry(width=8)
