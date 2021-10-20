@@ -1,5 +1,5 @@
 def format_duration(seconds):
-  """formats time in seconds to human readable time"""
+  """Formats time in seconds to human readable time. Did not include months."""
     def minute(seconds):
         if seconds < 60:
             if seconds == 0: return "now"
