@@ -33,11 +33,12 @@ label2.pack(pady=0)
 #this runs the pomodoro function of the app.
 def start_pomodoro():
     """Starts the pomodoro time to 50/10 intervals"""
-    while True:
+    cont = True
+    while cont == True:
         for i in range(3000, -1, -1): 
             minute = i // 60
             seconds = i % 60
-            pomodoro_label.config(text=f'{minute}:{seconds}')
+            pomodoro_label.config(text=f'{str(minute).zfill(2)}:{str(seconds).zfill(2)}')
             interface.update()
             time.sleep(1)
         
@@ -56,11 +57,16 @@ def start_pomodoro():
         continuation = messagebox.askyesno('Do you want to continue?')
         if continuation == True: continue
         else: break
-
+    
     
 
-pomodoro_button = tkinter.Button(interface, text='Start Pomodoro', background='Orange', foreground='Black', command=start_pomodoro)
+pomodoro_button = tkinter.Button(interface, text='Start Pomodoro', background='Red', foreground='Black', command=start_pomodoro)
 pomodoro_button.pack(padx=10, pady=10)
+
+# I don't know what to do with this button yet
+#pomodoro_button2 = tkinter.Button(interface, text='Stop Pomodoro', background='Orange', foreground='Black', command=)
+#pomodoro_button2.pack(padx=10, pady=10)
+
 pomodoro_label = tkinter.Label(interface, text='', font=('Helvetica', 48))
 pomodoro_label.pack(padx=10, pady=10)
 
