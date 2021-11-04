@@ -1,11 +1,10 @@
 from tkinter import Button, Tk, font, Entry
 
 gui = Tk()
-gui.configure(background="light gray")
+gui.configure(background="black")
 gui.title("Calculator")
-gui.geometry("350x500")
+gui.geometry("330x475")
 font = font.Font(family='Times',weight='bold')
-
 
 #BUTTONS
 number_1 = Button(gui,text='1',bg="gold",fg="black", height=4,width=8,font=font)
@@ -69,10 +68,10 @@ op_fraction = Button(gui,text='1/x',bg='gold',fg='black',height=4,width=8,font=f
 op_fraction.grid(row=2,column=1)
 
 def button_press():
-    pass
+   pass
     
 
-entry = Entry(width=8)
+entry = Entry(width=10, font=('Helvetica', 30))
 entry.grid(row=1, columnspan=4)
 
 
