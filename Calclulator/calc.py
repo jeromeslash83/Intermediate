@@ -5,6 +5,7 @@ gui = Tk()
 gui.configure(background="black")
 gui.title("Calculator")
 gui.geometry("330x550")
+gui.resizable(False,False)
 font = font.Font(family='Times',weight='bold')
 
 
