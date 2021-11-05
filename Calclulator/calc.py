@@ -138,7 +138,7 @@ clear.grid(row=7, columnspan=8)
     
 
 
-entry = Entry(width=14, font=('Helvetica', 30), textvariable=inputs)
+entry = Entry(width=14, font=('Helvetica', 30), textvariable=inputs, background='Black', foreground='White')
 entry.grid(row=0, columnspan=8)
 
 
