@@ -1,4 +1,4 @@
-from tkinter import Button, StringVar, Tk, font, Entry, Frame
+from tkinter import Button, StringVar, Tk, font, Entry
 import math
 
 gui = Tk()
