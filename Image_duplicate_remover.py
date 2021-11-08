@@ -6,7 +6,7 @@ def file_hash(filename):
     with open(filename,'rb') as f:
         return hashlib.md5(f.read()).hexdigest()
 os.getcwd()
-os.chdir(r'E:\AI and DATA SCIENCE\GIGA PROJECT\non_school\non_school')
+os.chdir(r'add path file here')
 os.getcwd()
 files_list = os.listdir('.')
 print (len(files_list))
